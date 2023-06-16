@@ -4,7 +4,7 @@ A professional portfolio website with an about me, works, contact me and a resum
 ## Link/Preview
 
 <p align="center">
-  <a href="https://shindekokoro.github.io/module02-Portfolio/ "><img src="https://raw.githubusercontent.com/shindekokoro/module01-CodeRefactor/main/02-portfolio.png"></a>
+  <a href="https://shindekokoro.github.io/module02-Portfolio/ "><img src="https://raw.githubusercontent.com/shindekokoro/module02-Portfolio/main/02-portfolio.png"></a>
 </p>
 
 
