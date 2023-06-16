@@ -11,6 +11,7 @@
 
     --transparent-figure: rgba(228, 223, 218, 0.666);
     --transparent-background: rgba(72, 169, 166, 0.95);
+    --transparent-hover: rgba(66, 130, 164, 0.95);
 
     --container-border: #48a9a6ff;
     --right-border: #4281a4ff;
@@ -172,6 +173,10 @@ main {
     text-align: left;
 }
 
+.work-container li:hover p {
+    background-color: var(--transparent-hover);
+}
+
 .work-container li p span {
     color: var(--alt-text-color);
     margin: 0px;
@@ -219,10 +224,13 @@ main {
     text-decoration-thickness: 3px;
     text-underline-offset: 6px;
     text-align: center;
+    padding: 5px;
 }
 .contact-container li a:hover {
-    color: var(--hover-color);
-    border-color: var(--hover-color);
+    color: var(--text-color);
+    text-decoration: none;
+    background-color: var(--hover-color);
+    padding: 5px;
 }
 
 footer {
