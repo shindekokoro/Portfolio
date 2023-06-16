@@ -1,0 +1,268 @@
+/* CSS Variable */
+:root{
+    --sub-heading: #48a9a6ff;
+    --text-color: #48a9a6ff;
+    --link-color: #48a9a6ff;
+    --alt-text-color: rgba(49,52,61,1);
+
+    --main-background: rgba(237,237,247,1);
+    --background-color: rgba(49,52,61,1);
+    --alt-background-color: #48a9a6ff;
+
+    --transparent-figure: rgba(228, 223, 218, 0.666);
+    --transparent-background: rgba(72, 169, 166, 0.95);
+
+    --container-border: #48a9a6ff;
+    --right-border: #4281a4ff;
+    --hover-color: #4281a4ff;
+}
+
+/* Main Page Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+}
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+ul {
+    margin: 5px 0px 5px 0px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--background-color);
+    height: 100px;
+    display: flex;
+    width: 100%;
+}
+header h1 {
+    float: left;
+    color: var(--alt-text-color);
+    background-color: var(--alt-background-color);
+    width: 30%;
+    font-size: xx-large;
+    text-align: right;
+    align-self: center;
+    padding: 15px 10px 15px 10px;
+    margin-top: 10px;
+}
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    text-align: right;
+    width: 100%;
+    padding: 3%;
+}
+header nav a {
+    font-size: larger;
+    font-weight: 600;
+    margin: 5px;
+    padding: 5px;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+}
+header a:hover {
+    color: var(--alt-text-color);
+    background-color: var(--alt-background-color);
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Figure Style */
+figure {
+    height: 200px;
+    width: 100%;
+    background-image: url('../images/background.JPG');
+    background-size: cover;
+    margin: 0px;
+    display: flex;
+}
+figure p {
+    align-self: flex-end;
+    width: 100%;
+    text-align: right;
+    color: var(--alt-text-color);
+    background-color: var(--transparent-figure);
+    padding-right: 20px;
+    font-size: x-large;
+}
+
+/* Control all content in main as one big flex box column */
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-background);
+    width: 100%;
+}
+
+/* Content inside the ID containers will be displayed in a row. */
+#about, #work, #contact {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Left container is a vertical container that should stretch to the size of all the "right" containers */
+.left-container {
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    justify-content: flex-end;
+    margin: 5px;
+    padding-right: 5px;
+    width: 24%;
+    min-height: 80px;
+    border-right: var(--right-border) solid 5px;
+}
+.left-container h2 {
+    text-align: right;
+    align-items: end;
+    margin-top: 0px;
+    font-size: xx-large;
+}
+
+/* Secondary Container for sections that allow for extra content */
+.about-container, .work-container, .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px;
+    width: 73%;
+    list-style-type: none;
+}
+
+/* About Section Specific Styles */
+.about-container p {
+    margin-top: 10px;
+}
+
+/* Work Style */
+.work-container li {
+    margin: 5px 3px 2px 0px;
+    flex: 1 0 200px;
+    width: 50%;
+    height: 175px;
+    border: 5px solid var(--container-border);
+    border-radius: 5px;
+}
+.work-container li:hover {
+    border-color: var(--hover-color);
+}
+.work-container li:first-child{
+    flex: 100%;
+    height: 300px;
+}
+
+/* Each <a> needs to act as another container for overlaid text content */
+.work-container li a {
+    display: flex;
+    width: 101%;
+    height: 101%;
+    align-self: flex-end;
+    color: var(--alt-text-color);
+}
+
+.work-container li p {
+    background-color: var(--transparent-background);
+    align-self: flex-end;
+    padding: 10px 5px 5px 5px;
+    font-weight: bolder;
+    text-align: left;
+}
+
+.work-container li p span {
+    color: var(--alt-text-color);
+    margin: 0px;
+    display: block;
+    font-weight: lighter;
+    font-size:smaller;
+    padding-top: 5px;
+}
+
+/* Background images for Work containers */
+.module01 {
+    background-image: url('../images/01-html-css-git-homework.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.homebridge-poweredup {
+    background-image: url('../images/homebridge-poweredup.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.zack-and-hillary {
+    background-image: url('../images/cake.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hillarys-graduation {
+    background-image: url('../images/graduation.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Contact Me container, similar to work container with different styling. */
+.contact-container li {
+    display: flex;
+    margin: 10px 3px 2px 0px;
+    width: 45%;
+    justify-content: center;
+    flex: 1 0 100px;
+}
+
+.contact-container li a {
+    align-self:flex-start;
+    font-size: larger;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+    text-align: center;
+}
+.contact-container li a:hover {
+    color: var(--hover-color);
+    border-color: var(--hover-color);
+}
+
+footer {
+    text-align: right;
+    padding: 5px;
+    background-color: var(--background-color);
+}
+
+/* Tablet */
+@media screen and (max-width:980px) {
+    header h1 {
+        font-size: 150%;
+    }
+    header nav li {
+        font-size: 120%;
+    }
+}
+
+/* Odd Screen Sizes */
+@media screen and (max-width:600px) {
+    header nav li {
+        font-size: 100%;
+    }
+    
+}
+
+/* Mobile */
+@media screen and (max-width:430px) {
+    .left-container h2 {
+        font-size: 150%;
+    }
+    header nav a {
+        padding: 1px;
+        margin: 1px;
+    }
+    .contact-container li {
+        flex-direction: column;
+    }
+    .contact-container li a {
+        font-size: small;
+    }
+    
+}
