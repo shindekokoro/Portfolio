@@ -206,6 +206,10 @@ main {
     background-size: cover;
 }
 
+.grow-box {
+    background-image: url('../images/grow-box.png');
+}
+
 .concert-groupie {
     background-image: url('../images/concert-groupie.jpg');
 }
